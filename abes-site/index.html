@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABES Engineering College</title>
+<style>
+
+/* ===================== Reset ===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===================== Header ===================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #000000;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 12px 32px;
+  min-height: 78px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text .brand-name {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.brand-text .brand-sub {
+  color: #cfcfcf;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  position: relative;
+  padding: 6px 2px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #d4af37;
+  transition: width 0.25s ease;
+}
+
+.nav-links li a:hover {
+  color: #d4af37;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* ===================== Hero ===================== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('https://static.boostmytalent.com/img/univ/abes-engineering-college-ghaziabad-campus-admission.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  padding: 0 24px;
+  color: #ffffff;
+}
+
+.hero-content h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.hero-content p {
+  font-size: clamp(15px, 1.6vw, 19px);
+  font-weight: 500;
+  line-height: 1.7;
+  color: #f2f2f2;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+
+/* ===================== Glance Section ===================== */
+.glance {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 80px 32px;
+  background: #f2f3f1;
+}
+
+.glance-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 36px;
+}
+
+.glance-marquee-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee-scroll 22s linear infinite;
+}
+
+.glance-marquee-track span {
+  color: #9d1d2c;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.2px;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.glance-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.glance-header h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+.glance-header p {
+  max-width: 520px;
+  font-size: 15px;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.glance-divider {
+  border: none;
+  border-top: 1px solid #d0d0d0;
+  margin-bottom: 48px;
+}
+
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 60px;
+}
+
+.glance-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.glance-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glance-grid .glance-item:nth-child(3n+1) { transition-delay: 0s; }
+.glance-grid .glance-item:nth-child(3n+2) { transition-delay: 0.12s; }
+.glance-grid .glance-item:nth-child(3n+3) { transition-delay: 0.24s; }
+
+.glance-item .glance-number {
+  color: #8a1c2b;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.glance-item .glance-label {
+  color: #111111;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ===================== Footer ===================== */
+.site-footer {
+  background: #000000;
+  color: #e6e6e6;
+  padding: 64px 32px 40px;
+}
+
+.footer-grid {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h3 {
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.disclosures-columns {
+  display: flex;
+  gap: 60px;
+}
+
+.disclosures-columns ul li,
+.important-links li {
+  margin-bottom: 14px;
+}
+
+.disclosures-columns ul li a,
+.important-links li a {
+  color: #e6e6e6;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.disclosures-columns ul li a:hover,
+.important-links li a:hover {
+  color: #d4af37;
+}
+
+.important-links li a.active-link {
+  color: #d4af37;
+}
+
+.footer-address p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e6e6e6;
+  margin-bottom: 12px;
+}
+
+.footer-address a {
+  color: #e6e6e6;
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.social-icons a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #555555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 14px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.social-icons a:hover {
+  background: #d4af37;
+  border-color: #d4af37;
+  color: #000000;
+}
+
+.footer-bottom {
+  max-width: 1600px;
+  margin: 56px auto 0;
+  padding-top: 32px;
+  border-top: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.footer-brand .brand-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.footer-brand span {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer-bottom .rights {
+  color: #cccccc;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 1100px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links li a {
+    font-size: 13px;
+  }
+
+  .glance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-col:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 860px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 14px;
+    row-gap: 10px;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .glance {
+    padding: 56px 20px;
+  }
+
+  .glance-header {
+    flex-direction: column;
+  }
+
+  .disclosures-columns {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-text .brand-name {
+    font-size: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .glance-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .glance-marquee-track span {
+    font-size: 16px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-col:first-child {
+    grid-column: auto;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===================== Header ===================== -->
+<header class="site-header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img class="brand-logo" src="./img/abes-logo.png" alt="ABES Engineering College logo">
+      <div class="brand-text">
+        <span class="brand-name">ABES</span>
+        <span class="brand-sub">Engineering College</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#admissions">Admissions</a></li>
+      <li><a href="#academics">Academics</a></li>
+      <li><a href="#clubs">Clubs</a></li>
+      <li><a href="#campus">Campus</a></li>
+      <li><a href="#placements">Placements</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#entrepreneurship">Entrepreneurship</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===================== Hero ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Welcome to ABES</h1>
+    <p>Recognized among the best engineering colleges in the Delhi NCR, ABES Engineering College blends academic excellence with industry-ready learning.</p>
+  </div>
+</section>
+
+<!-- ===================== ABES at a Glance ===================== -->
+<section class="glance" id="glance">
+  <div class="glance-marquee">
+    <div class="glance-marquee-track">
+      <span>&ldquo;We pledge to position India as a Vishwa Guru in AI, leading innovation, ethics, and education, fulfilling our Prime Minister&rsquo;s vision.&rdquo;</span>
+    </div>
+  </div>
+  <div class="glance-header">
+    <h2>ABES at a Glance</h2>
+    <p>For over two decades, ABES has firmly established itself in society as epitome of outcome-focused learning. Its enduring reputation embodies trust and value.</p>
+  </div>
+  <hr class="glance-divider">
+  <div class="glance-grid">
+    <div class="glance-item">
+      <div class="glance-number">Est. 2000</div>
+      <div class="glance-label">Celebrating 26 Years Of Excellence</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">8090</div>
+      <div class="glance-label">Students in Campus</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">24000+</div>
+      <div class="glance-label">Alumni Worldwide</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">54</div>
+      <div class="glance-label">Startups Incubated</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">60 LPA</div>
+      <div class="glance-label">Highest Package in Placements 2025</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">1692</div>
+      <div class="glance-label">Offers in Placement 2025</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">15.77 Acres</div>
+      <div class="glance-label">Campus With All Modern Facilities</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">500+</div>
+      <div class="glance-label">Recruiters</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">2690+</div>
+      <div class="glance-label">Scopus Publication</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">375+</div>
+      <div class="glance-label">Published Patents</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">9</div>
+      <div class="glance-label">Granted Patents</div>
+    </div>
+    <div class="glance-item">
+      <div class="glance-number">15 Lacs</div>
+      <div class="glance-label">Consultancy Received in 2024-25</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Footer ===================== -->
+<footer class="site-footer">
+  <div class="footer-grid">
+
+    <div class="footer-col">
+      <h3>Mandatory Disclosures</h3>
+      <div class="disclosures-columns">
+        <ul>
+          <li><a href="#">Mandatory Disclosure</a></li>
+          <li><a href="#">AICTE Approval</a></li>
+          <li><a href="#">University Affiliation Letter</a></li>
+          <li><a href="#">Education Verification</a></li>
+          <li><a href="#">Audited Statement</a></li>
+          <li><a href="#">Student's Request Form (SIS)</a></li>
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Barrier Free Environment Certificate</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Hostel Rule Booklet</a></li>
+          <li><a href="#">Refund Policy</a></li>
+          <li><a href="#">College Policy</a></li>
+          <li><a href="#">Grievance Redressal Portal</a></li>
+          <li><a href="#">All Committees</a></li>
+          <li><a href="#">Report ARIIA 2020</a></li>
+          <li><a href="#">TEDxABESEC'24 Brochure</a></li>
+          <li><a href="#">Circulars/Notices</a></li>
+          <li><a href="#">UGC Section2(f) certificate</a></li>
+          <li><a href="#">Newsletters</a></li>
+          <li><a href="#">University appointment of Ombudsman</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-col footer-address">
+      <h3>Address</h3>
+      <p>19th KM Stone</p>
+      <p>NH-09 Ghaziabad (UP)</p>
+      <p>PIN - 201009</p>
+      <p>Phone no. <a href="tel:01207135112">01207135112</a></p>
+      <p>Email: <a href="mailto:info@abes.ac.in">info@abes.ac.in</a></p>
+
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="Twitter">x</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="YouTube">yt</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>Important Links</h3>
+      <ul class="important-links">
+        <li><a href="#">Turnitin</a></li>
+        <li><a href="#">No-Dues Portal</a></li>
+        <li><a href="#">Disclaimer</a></li>
+        <li><a href="https://abes.ac.in/virtual-tour.html" class="active-link">Virtual Tour</a></li>
+        <li><a href="#">UAV</a></li>
+        <li><a href="#">RTI</a></li>
+        <li><a href="#">Admissions</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">CETL (SIS)</a></li>
+        <li><a href="#">I &amp; E Policies</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Placement Referal Link</a></li>
+        <li><a href="#">Undertaking</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Search</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-brand">
+      <img class="brand-logo" src="./img/abes-logo.png" alt="ABES Engineering College logo">
+      <span>ABES Engineering College</span>
+    </div>
+    <p class="rights">All Rights Reserved. ABES Engineering College</p>
+  </div>
+</footer>
+
+<script>
+  // Reveal "ABES at a Glance" cards as they enter the viewport while scrolling.
+  var glanceItems = document.querySelectorAll('.glance-item');
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  glanceItems.forEach(function (item) {
+    observer.observe(item);
+  });
+</script>
+
+</body>
+</html>
