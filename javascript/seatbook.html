@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const car = ["BMW", 500, 4];
+        const hele = ["Apache", 200, 2];
+        const aero = ["Cessna", 1000, 4];
+
+        const book = (car, hele, aero) => {
+            let vehicle = prompt("Enter the vehicle name : car, hele or aero : ");
+            let seat = prompt("Enter the number of seats you want to book : ");
+
+            if(vehicle == "car"){
+                if(seat <= car[2]){
+                    document.write("<br> Your " + seat + " seats are booked in " + car[0]);
+                    document.write("<br> Total cost is : " + seat * car[1]);
+                }else{
+                    document.write("<br> Sorry, only " + car[2] + " seats are available in " + car[0]);
+                }
+            }
+            else if(vehicle == "hele"){
+                if(seat <= hele[2]){
+                    document.write("<br> Your " + seat + " seats are booked in " + hele[0]);
+                    document.write("<br> Total cost is : " + seat * hele[1]);
+                }else{
+                    document.write("<br> Sorry, only " + hele[2] + " seats are available in " + hele[0]);
+                }
+            }
+            else if(vehicle == "aero"){
+                if(seat <= aero[2]){
+                    document.write("<br> Your " + seat + " seats are booked in " + aero[0]);
+                    document.write("<br> Total cost is : " + seat * aero[1]);
+                }else{
+                    document.write("<br> Sorry, only " + aero[2] + " seats are available in " + aero[0]);
+                }
+            }
+            else{
+                document.write("<br> Invalid vehicle name");
+            }
+        }
+
+        book(car, hele, aero);
+    </script>
+</body>
+</html>
