@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    
+    <script>
+        //code for (for loop)
+
+        for(let i = 0; i < 5; i++){
+            document.write("<br> abes College");
+        }
+
+        const car = ["BMW", "Volvo", "Saab", "Ford"];
+        let text = " ";
+        let len = car.length;
+
+        let p = document.querySelector("#demo");
+        for(let i = 0; i < len; i++){
+            if(i == 1)continue;
+            text += car[i] + "<br>";
+        }
+        p.innerHTML = text;
+    </script>
+</body>
+</html>

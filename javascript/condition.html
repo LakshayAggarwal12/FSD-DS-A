@@ -7,14 +7,25 @@
 </head>
 <body>
     <script>
-        let a = 10;
-        let b = 3;
+        let a = prompt("Enter a number:");
 
-        if(a < b){
-            console.log(a);
+        let org = a;
+        let arm = 0;
+        let count = 0;
+        while (a > 0) {
+            a = Math.floor(a / 10);
+            count++;
         }
-        if(!(a<b)){
-            console.log(b);
+        a = org;
+        while(a){
+            arm += a%10 ** count;
+            a = Math.floor(a / 10);
+        }
+
+        if(arm == org) {
+            alert(org + " is an Armstrong number.");
+        } else {
+            alert(org + " is not an Armstrong number.");
         }
     </script>
 </body>
