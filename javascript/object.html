@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name"></h1>
+    <h3 id="class"></h3>
+    <h3 id="fee"></h3>
+    <script>
+        //create object
+        const student = {
+            name : "xyz",
+            class : "B.Tech",
+            fee : 100000
+        }
+
+        //display object
+        document.getElementById("name").innerHTML = student.name;
+        document.getElementById("class").innerHTML = student.class;
+        document.getElementById("fee").innerHTML = student.fee;
+
+        document.write(student);
+        //this shows [object Object] because it is an object and not a string. To display the object as a string, we can use JSON.stringify() method.
+        //by default, the JSON.stringify() method converts only enumerable own properties of an object to a JSON string. It does not convert inherited properties or methods.
+        //the second object is in [] as it is an array of objects. The JSON.stringify() method converts the array of objects to a JSON string.
+        //since the JSON.stringify() method converts only enumerable own properties of an object to a JSON string, it does not convert inherited properties or methods. Therefore, the second object is not converted to a JSON string.
+
+    </script>
+</body>
+</html>
