@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin:0; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:Arial,sans-serif; background:linear-gradient(135deg,#e3f2fd,#f1f8e9); color:#263238;">
+
+    <div id="product" style="width:420px; padding:30px; background-color:white; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.15); text-align:center;">
+
+        <h1 style="margin:0 0 10px 0; color:#1565c0; font-size:32px;">🛒 Welcome to the Shop</h1>
+
+        <p style="margin:0 0 25px 0; color:#607d8b; font-size:16px;">We have the following products available:</p>
+
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
+
+            <li style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; background-color:#fff8e1; border-radius:10px; font-size:17px;">
+                <span>🍵 Tea</span>
+                <strong>₹450</strong>
+            </li>
+
+            <li style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; background-color:#efebe9; border-radius:10px; font-size:17px;">
+                <span>☕ Coffee</span>
+                <strong>₹600</strong>
+            </li>
+
+            <li style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; background-color:#fffde7; border-radius:10px; font-size:17px;">
+                <span>🍚 Sugar</span>
+                <strong>₹700</strong>
+            </li>
+
+            <li style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; background-color:#f3e5f5; border-radius:10px; font-size:17px;">
+                <span>🫘 Pulses</span>
+                <strong>₹100</strong>
+            </li>
+
+        </ul>
+    </div>
+
+    <div style="margin-top:20px; display:flex; align-items:center; justify-content:center;">
+
+        <button onclick="buyProduct()" style="background-color:#1565c0; color:white; border:none; padding:12px 28px; border-radius:8px; font-size:16px; font-weight:bold; cursor:pointer; box-shadow:0 5px 15px rgba(21,101,192,0.3);">
+            🛍️ Want to Buy?
+        </button>
+
+    </div>
+
+    <div id="result" style="width:420px; min-height:100px; margin-top:20px; padding:20px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; gap:20px; background-color:white; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.12);">
+
+        <img id="productImage" src="" alt="Product Image" style="width:70px; height:70px; object-fit:cover; border-radius:12px; display:none;">
+
+        <h3 id="bill" style="margin:0; color:#2e7d32; font-size:18px;"></h3>
+
+    </div>
+
+    <script>
+        const shop = {
+            tea : 450,
+            coffee : 600,
+            sugar : 700,
+            pulses : 100
+        }
+
+        const image = {
+            tea : "https://st2.depositphotos.com/1177973/10375/i/950/depositphotos_103753420-stock-photo-porcelain-cup-of-tea-with.jpg",
+            coffee : "https://tse3.mm.bing.net/th/id/OIP.XULE7ILC-bf_FIkoo7E_UgHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+            sugar : "https://tse1.mm.bing.net/th/id/OIP.KKx-InZGFB8TRhfM1BFi5QHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+            pulses : "https://i.pinimg.com/originals/02/36/58/023658ea46c4f32c3781ae73cc8526fb.jpg"
+        }
+
+        function buyProduct(){
+            let product = prompt("Enter the product name : tea, coffee, sugar or pulses : ");
+            let quantity = prompt("Enter the quantity you want to buy : ");
+
+            document.getElementById("productImage").src = image[product];
+            document.getElementById("productImage").style.display = "block";
+            document.getElementById("bill").innerText = "Your total bill is : " + shop[product] * quantity;
+        }
+    </script>
+
+</body>
+</html>

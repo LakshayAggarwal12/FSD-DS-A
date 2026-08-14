@@ -22,7 +22,9 @@
         document.getElementById("class").innerHTML = student.class;
         document.getElementById("fee").innerHTML = student.fee;
 
-        document.write(student);
+        for(let key in student){
+            document.write("<br>" + key + " : " + student[key]);
+        }
         //this shows [object Object] because it is an object and not a string. To display the object as a string, we can use JSON.stringify() method.
         //by default, the JSON.stringify() method converts only enumerable own properties of an object to a JSON string. It does not convert inherited properties or methods.
         //the second object is in [] as it is an array of objects. The JSON.stringify() method converts the array of objects to a JSON string.
