@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Course Directory</title>
+</head>
+    <body style="margin: 0; min-height: 100vh; background: #f3f6fb; color: #1f2937; font-family: Arial, sans-serif;">
+        <main style="max-width: 960px; margin: 0 auto; padding: 48px 20px;">
+            <section style="background: #ffffff; border-radius: 12px; padding: 32px; box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);">
+                <div style="margin-bottom: 28px;">
+                    <p style="margin: 0 0 8px; color: #2563eb; font-size: 13px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">Student Directory</p>
+                    <h1 style="margin: 0 0 8px; color: #111827; font-size: 32px;">Find students by course</h1>
+                    <p style="margin: 0; color: #6b7280;">Select a course to view the enrolled students and their fee details.</p>
+                </div>
+
+                <form id="courseForm" style="display: flex; flex-wrap: wrap; gap: 12px; align-items: end; padding: 20px; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px;">
+                    <div style="flex: 1 1 240px;">
+                        <label for="courseSelect" style="display: block; margin-bottom: 7px; color: #374151; font-size: 14px; font-weight: bold;">Course</label>
+                        <select id="courseSelect" style="width: 100%; box-sizing: border-box; padding: 11px 12px; border: 1px solid #cbd5e1; border-radius: 6px; background: #ffffff; color: #1f2937; font-size: 15px;">
+                            <option value="">Choose a course</option>
+                            <option value="Btech">Btech</option>
+                            <option value="High School">High School</option>
+                            <option value="BCA">BCA</option>
+                            <option value="BA">BA</option>
+                            <option value="MCA">MCA</option>
+                        </select>
+                    </div>
+                    <button type="submit" style="padding: 12px 22px; border: 0; border-radius: 6px; background: #2563eb; color: #ffffff; font-size: 15px; font-weight: bold; cursor: pointer;">Search Students</button>
+                </form>
+
+                <div id="results" style="margin-top: 28px;">
+                    <p style="margin: 0; color: #6b7280; text-align: center;">Choose a course to see results.</p>
+                </div>
+            </section>
+        </main>
+
+    <script>
+        const courses = ["Btech", "High School", "BCA", "MCA",  "BA"];
+        const details = [
+            {
+                name: "Lakshay",
+                course: "Btech",
+                className: "CSE",
+                fee: 10000
+            },
+            {
+                name: "Piyush",
+                course: "High School",
+                className: "10th",
+                fee: 5000
+            },
+            {
+                name: "Kushal",
+                course: "Btech",
+                className: "CSE-DS",
+                fee: 15000
+            },
+            {
+                name: "Rohit",
+                course: "BCA",
+                className: "BCA",
+                fee: 12000
+            },
+            {
+                name: "Naman",
+                course: "BA",
+                className: "BA",
+                fee: 12000
+            }
+        ]
+        
+            const courseForm = document.getElementById("courseForm");
+            const courseSelect = document.getElementById("courseSelect");
+            const results = document.getElementById("results");
+
+            courseForm.addEventListener("submit", (event) => {
+                event.preventDefault();
+                const course = courseSelect.value;
+                const students = details.filter((student) => student.course === course);
+
+                if (!course) {
+                    results.innerHTML = '<p style="margin: 0; color: #b45309; text-align: center;">Please choose a course first.</p>';
+                    return;
+                }
+
+                if (students.length === 0) {
+                    results.innerHTML = `<p style="margin: 0; color: #6b7280; text-align: center;">No students found for ${course}.</p>`;
+                    return;
+                }
+
+                results.innerHTML = `<h2 style="margin: 0 0 16px; color: #111827; font-size: 20px;">${students.length} student${students.length > 1 ? "s" : ""} found</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">${students.map((student) => `<article style="padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px; background: #ffffff;"><h3 style="margin: 0 0 14px; color: #111827; font-size: 18px;">${student.name}</h3><p style="margin: 7px 0; color: #6b7280; font-size: 14px;"><strong style="color: #374151;">Course:</strong> ${student.course}</p><p style="margin: 7px 0; color: #6b7280; font-size: 14px;"><strong style="color: #374151;">Class:</strong> ${student.className}</p><p style="margin: 7px 0; color: #6b7280; font-size: 14px;"><strong style="color: #374151;">Fee:</strong> Rs. ${student.fee.toLocaleString("en-IN")}</p></article>`).join("")}</div>`;
+            });
+        
+    </script>
+</body>
+</html>
