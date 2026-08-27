@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking System</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body style="background-color: lightblue; color: white;">
+    
+    <div style="background-color: blueviolet; border: 2px solid red; padding: 20px; margin: 20px; border-radius: 10px; width: 50%; margin-left: auto; margin-right: auto;">
+            <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+                <img src="https://static.vecteezy.com/system/resources/previews/045/992/739/large_2x/bus-logo-design-template-travel-bus-logo-on-white-background-free-vector.jpg" alt="Bus Logo" style="width: 100px; height: 100px; border-radius: 50%;">
+                <h1 style="color: white;">Bus Booking System</h1>
+            </div>
+        <center><h3 style="background-color: antiquewhite; color: black; border: 1px solid black; padding: 10px;">User Information</h3></center>
+        <div style="display: flex; flex-direction: column; gap: 0px;">
+            <p>User Name: <input type="text" placeholder="Enter your name" id="name"></p>
+            <p>User Age: <input type="number" placeholder="Enter your age" id="age"></p>
+            <p>Adhaar Number: <input type="number" placeholder="Enter Adhaar number" id="adhaar"></p>
+            <p>Select Your City: 
+                <select name="city" id="city">
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="kolkata">Kolkata</option>
+                    <option value="chennai">Chennai</option>
+                </select>
+            </p>
+            <p>Select Date: <input type="date" id="date"></p>
+        </div>
+
+            <center><h3 style="background-color: antiquewhite; color: black; border: 1px solid black; padding: 10px;">Bus Information</h3></center>
+        <div style="display: flex; flex-direction: column; gap: 0px;">
+            <p>Select your Bus Type : </p>
+            <p>AC Bus: 2000 <input type="radio" name="busType" value="ac" id="ac"></p>
+            <p>Non-AC Bus: 1500 <input type="radio" name="busType" value="non-ac" id="non-ac"></p>
+            <p>Select your Seat : <select name="seat" id="seat">
+                <option value="seat1">1</option>
+                <option value="seat2">2</option>
+                <option value="seat3">3</option>
+                <option value="seat4">4</option>
+                <option value="seat5">5</option>
+            </select></p>
+        </div>
+        <center>
+            <button style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" id="book-button">Book Now</button>
+        </center>
+        <div id="ticket-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
