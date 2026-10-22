@@ -1,0 +1,44 @@
+[
+  {
+    "code": "CS301",
+    "name": "Data Structures & Algorithms",
+    "department": "Computer Science & Engineering",
+    "credits": 4
+  },
+  {
+    "code": "CS302",
+    "name": "Database Management Systems",
+    "department": "Computer Science & Engineering",
+    "credits": 4
+  },
+  {
+    "code": "CS303",
+    "name": "Operating Systems",
+    "department": "Computer Science & Engineering",
+    "credits": 3
+  },
+  {
+    "code": "CS304",
+    "name": "Computer Networks",
+    "department": "Computer Science & Engineering",
+    "credits": 3
+  },
+  {
+    "code": "CS305",
+    "name": "Software Engineering",
+    "department": "Computer Science & Engineering",
+    "credits": 3
+  },
+  {
+    "code": "IT301",
+    "name": "Web Technologies & Cloud Computing",
+    "department": "Information Technology",
+    "credits": 4
+  },
+  {
+    "code": "EC201",
+    "name": "Digital Electronics & Logic Design",
+    "department": "Electronics & Communication Engineering",
+    "credits": 4
+  }
+]

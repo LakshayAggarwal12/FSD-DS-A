@@ -1,0 +1,38 @@
+[
+  {
+    "id": "asg-001",
+    "title": "Assignment 1: Binary Search Trees & AVL Rotations",
+    "subject": "Data Structures & Algorithms",
+    "batch": "2022-2026",
+    "section": "A",
+    "description": "Implement a self-balancing AVL Tree in C++ or Java. Measure height rebalancing operations across 10,000 random insertions and record performance benchmarks.",
+    "fileName": "CS301_Assignment1_AVL_Trees.pdf",
+    "fileSize": "48 KB",
+    "uploadDate": "2026-10-14",
+    "pdfData": "data:application/pdf;base64,JVBERi0xLjQKMSAwIG9iaiA8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4gZW5kb2JqCjIgMCBvYmogPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4gZW5kb2JqCjMgMCBvYmogPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA2MTIgNzkyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA0IDAgUiA+PiA+PiAvQ29udGVudHMgNSAwIFIgPj4gZW5kb2JqCjQgMCBvYmogPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAvSGVsdmV0aWNhID4+IGVuZG9iago1IDAgb2JqIDw8IC9MZW5ndGggMjQ1ID4+IHN0cmVhbQpCVAovRjEgMTggVGYKNzIgNzIwIFRkCihDUzMwMTogQXNzaWdubWVudCAxKSBUagovRjEgMTIgVGYKMCAtMzYgVGQKKEJpbmFyeSBTZWFyY2ggVHJlZXMgJiBBVkwgUm90YXRpb25zKSBUagowIC0yNCBUZAooRHVlOiBPY3QgMzAsIDIwMjYpIFRqCjAgLTMwIFRkCihJbnN0cnVjdGlvbnM6IFN1Ym1pdCB5b3VyIGRvY3VtZW50ZWQgY29kZSBhbmQgcGVyZm9ybWFuY2UgYW5hbHlzaXMgcmVwb3J0IGluIFBERiBmb3JtYXQuKSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCA2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAwOSAwMDAwMCBuIAowMDAwMDAwMDU4IDAwMDAwIG4gCjAwMDAwMDAxMTUgMDAwMDAgbiAKMDAwMDAwMDIyNyAwMDAwMCBuIAowMDAwMDAwMzA2IDAwMDAwIG4gCnRyYWlsZXIgPDwgL1NpemUgNiAvUm9vdCAxIDAgUiA+PgpzdGFydHhyZWYKNjQ1CiUlRU9G"
+  },
+  {
+    "id": "asg-002",
+    "title": "Assignment 2: Hospital Management ER Diagram & 3NF Normalization",
+    "subject": "Database Management Systems",
+    "batch": "2022-2026",
+    "section": "A",
+    "description": "Design a comprehensive relational schema for a multi-specialty healthcare facility. Provide complete ER models, functional dependencies, and proof of 3NF/BCNF normalization.",
+    "fileName": "CS302_DBMS_Case_Study_Normalization.pdf",
+    "fileSize": "54 KB",
+    "uploadDate": "2026-10-18",
+    "pdfData": "data:application/pdf;base64,JVBERi0xLjQKMSAwIG9iaiA8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4gZW5kb2JqCjIgMCBvYmogPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4gZW5kb2JqCjMgMCBvYmogPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA2MTIgNzkyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA0IDAgUiA+PiA+PiAvQ29udGVudHMgNSAwIFIgPj4gZW5kb2JqCjQgMCBvYmogPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAvSGVsdmV0aWNhID4+IGVuZG9iago1IDAgb2JqIDw8IC9MZW5ndGggMjQ3ID4+IHN0cmVhbQpCVAovRjEgMTggVGYKNzIgNzIwIFRkCihDUzMwMjogQXNzaWdubWVudCAyKSBUagovRjEgMTIgVGYKMCAtMzYgVGQKKFJlbGF0aW9uYWwgU2NoZW1hICYgM05GIE5vcm1hbGl6YXRpb24pIFRqCjAgLTI0IFRkCihEdWU6IE5vdiAwNSwgMjAyNikgVGoKMCAtMzAgVGQKKEluc3RydWN0aW9uczogU3VibWl0IHlvdXIgZG9jdW1lbnRlZCBjb2RlIGFuZCBwZXJmb3JtYW5jZSBhbmFseXNpcyByZXBvcnQgaW4gUERGIGZvcm1hdC4pIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAwMDAwIG4gCjAwMDAwMDAwNTggMDAwMDAgbiAKMDAwMDAwMDExNSAwMDAwMCBuIAowMDAwMDAwMjI3IDAwMDAwIG4gCjAwMDAwMDAzMDYgMDAwMDAgbiAKdHJhaWxlciA8PCAvU2l6ZSA2IC9Sb290IDEgMCBSID4+CnN0YXJ0eHJlZgo2NDcKJSVFT0Y="
+  },
+  {
+    "id": "asg-003",
+    "title": "Assignment 1: Responsive Single Page Application Architecture",
+    "subject": "Web Technologies & Cloud Computing",
+    "batch": "2022-2026",
+    "section": "All",
+    "description": "Develop a modern, component-driven dashboard frontend utilizing clean architectural separation and local state caching.",
+    "fileName": "IT301_WebTech_Assignment_1.pdf",
+    "fileSize": "42 KB",
+    "uploadDate": "2026-10-19",
+    "pdfData": "data:application/pdf;base64,JVBERi0xLjQKMSAwIG9iaiA8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4gZW5kb2JqCjIgMCBvYmogPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4gZW5kb2JqCjMgMCBvYmogPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA2MTIgNzkyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA0IDAgUiA+PiA+PiAvQ29udGVudHMgNSAwIFIgPj4gZW5kb2JqCjQgMCBvYmogPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAvSGVsdmV0aWNhID4+IGVuZG9iago1IDAgb2JqIDw8IC9MZW5ndGggMjQ2ID4+IHN0cmVhbQpCVAovRjEgMTggVGYKNzIgNzIwIFRkCihJVDMwMTogV2ViIFRlY2ggQXNzaWdubWVudCAxKSBUagovRjEgMTIgVGYKMCAtMzYgVGQKKFJlc3BvbnNpdmUgU1BBIEFyY2hpdGVjdHVyZSkgVGoKMCAtMjQgVGQKKER1ZTogTm92IDEwLCAyMDI2KSBUagowIC0zMCBUZAooSW5zdHJ1Y3Rpb25zOiBTdWJtaXQgeW91ciBkb2N1bWVudGVkIGNvZGUgYW5kIHBlcmZvcm1hbmNlIGFuYWx5c2lzIHJlcG9ydCBpbiBQREYgZm9ybWF0LikgVGoKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMDkgMDAwMDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDAwMDAwIG4gCjAwMDAwMDAyMjcgMDAwMDAgbiAKMDAwMDAwMDMwNiAwMDAwMCBuIAp0cmFpbGVyIDw8IC9TaXplIDYgL1Jvb3QgMSAwIFIgPj4Kc3RhcnR4cmVmCjY0NgolJUVPRg=="
+  }
+]
